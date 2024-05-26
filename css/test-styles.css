@@ -1,0 +1,38 @@
+/*  
+CSS Selectors
+
+    Element selector:    p, h3
+    Class selector:      .about-list-item (use ".")
+    ID selector:         #name (use "#")
+
+*/
+
+
+p {
+    color: red  /* Change the color of the text to red */
+}
+
+h3 {
+    color: green;
+}
+
+.about-list-item {
+    font-style: italic; /* Make the text italic */
+}
+
+#name {
+    color: blue;
+}
+
+.grid-table {
+    display: grid;  /* Use grid to create a grid layout */
+    grid-template-rows: auto auto;  /* Use auto twice for 2 rows */
+    grid-template-columns: auto auto auto;  /* Use auto three times for 3 columns */
+}
+
+@media (max-width: 600px) { /* Use media query to change the layout when the screen size is less than 600px */
+    .grid-table {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;  /* Use auto six times for 6 rows */
+    }
+}

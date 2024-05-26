@@ -1,6 +1,6 @@
 body {
     font-family: 'montserrat', sans-serif; /* Use Montserrat as the font for the body */
-    background: #143763;
+    background: #90ccd9;
     color: white;
 }
 
@@ -109,8 +109,8 @@ h1, h2, h3, h4 {
 }
 
 .profile-picture {
-    border-radius: 50%; /* Make the image round */
-    width: 150px;
+    border-radius: 25%; /* Make the image round */
+    width: auto;
     height: 150px;
     box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16); /* Add a shadow to the image */
     transition: all ease-in-out .2s; /* Add a transition effect to the image */

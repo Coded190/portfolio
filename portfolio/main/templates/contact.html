@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contact Page
+{% endblock title %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+{% endblock extrahead %}
+
+{% block content %}
+<div class="contact-info">
+    <img class="profile-picture" src="../static/images/Headshot_Professional.pdf" width="auto" height="300"/>
+    <h1 id="name">Christian Moore</h1>
+    <h3>Web/Full-Stack Developer</h3>
+    <h3>Database Manager</h3>
+    <h3>ML/AI Engineer</h3>
+    <p>(( Never stop learning ))</p>
+    <ul class="email-list">
+        <li>Email: Moorechristian15@yahoo.com</li>
+    </ul>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <h3>Links</h3>
+    <ul class="link-list">
+        <li><a href="https://www.linkedin.com/in/chrismoore-morehouse/">LinkedIn</a></li>
+        <li><a href="https://github.com/Coded190/">GitHub</a></li>
+    </ul>
+</div>
+
+{% endblock content %}

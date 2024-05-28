@@ -1,0 +1,142 @@
+body {
+    font-family: 'montserrat', sans-serif; /* Use Montserrat as the font for the body */
+    background: #90ccd9;
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'montserrat', monospace; /* Use Roboto as the font for the headings */
+}
+
+.container {
+    max-width: 840px;   /* Set the maximum width of the container to 840px */
+    margin: 0 auto;     /* Center the container */
+}
+
+.container > div {
+    margin: 20px auto;  /* Add margin to the divs inside the container */
+}
+
+.intro {
+    text-align: center; /* Align the text to the center */
+}
+
+.about-grid {
+    display: grid;  /* Use grid to create a grid layout */
+    grid-template-columns: 50% 50%;  /* Use 50% twice for equal size for columns both columns  */
+}
+
+.i-am, .i-like {
+    text-align: center;
+}
+
+.about-list {
+    text-align: center;
+    list-style: none;   /* Remove the bullet points from the list */
+}
+
+@media (max-width: 480px) { /* Apply the following styles for screens less than 480px */
+    .about-grid {
+        grid-template-columns: 100%;   /* Use 100% for a single column layout */
+    }
+}
+
+.projects-heading {
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.project-image-wrapper {    
+    justify-self: center;   /* Align the image to the center */
+    padding: 4%;
+    position: relative;
+}
+
+.project-image {
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+    transition: all ease-in-out .2s;
+}
+
+.project-image:hover {
+    filter: brightness(.75); /* Change the brightness on hover */
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+}
+
+.project-image-wrapper:hover > h4 {
+    visibility: visible; /* Show the project name on hover */
+}
+
+.project-image-wrapper > h4 {   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    visibility: hidden;
+    z-index: 2;
+    transition: all ease-in-out .2s;
+}
+
+@media (max-width:650px) {
+    .project-grid {
+        grid-template-columns: 100%;
+    }
+}
+
+.links-and-contact {
+    display: grid; /* Use grid to create a grid layout */
+    grid-template-columns: 30% 70%;
+}
+
+.links {
+    justify-self: center;
+}
+
+.links-list {
+    list-style: none;  /* Remove the bullet points from the list */
+    padding: 0;
+}
+
+@media (max-width:650px) {
+    .links-and-contact {
+        grid-template-columns: 100%;
+    }
+}
+
+.profile-picture {
+    border-radius: 25%; /* Make the image round */
+    width: auto;
+    height: 150px;
+    box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16); /* Add a shadow to the image */
+    transition: all ease-in-out .2s; /* Add a transition effect to the image */
+}
+
+.profile-picture:hover {
+    box-shadow: 0 14px 24px 0 rgb(34, 60, 80, 0.16); /* Change the shadow on hover */
+}
+
+form input, textarea {
+    padding: 5px;
+    border-radius: 5px;
+    width: 240px;
+}
+
+form input[type="submit"] {
+    width: 250px;
+
+}
+
+.submit-button-wrapper {
+    margin: 20px 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));   /* Add a gradient to the hr going from transparent to black to transparent*/
+}

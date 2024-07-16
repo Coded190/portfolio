@@ -140,3 +140,23 @@ hr {
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));   /* Add a gradient to the hr going from transparent to black to transparent*/
 }
+
+.awards-title {
+    text-align: center;
+}
+
+.accomplishments {
+    text-align: center;
+}
+
+.accomplishment-list-item {
+    list-style-type: none; /* Remove the bullet points from the list */
+}
+
+.research-club {
+    text-align: center;
+}
+
+.research-list-item {
+    list-style-type: none; /* Remove the bullet points from the list */
+}

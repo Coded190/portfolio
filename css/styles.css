@@ -160,3 +160,11 @@ hr {
 .research-list-item {
     list-style-type: none; /* Remove the bullet points from the list */
 }
+
+.personal-interest {
+    text-align: center;
+}
+
+.personal-list-item {
+    list-style-type: none; /* Remove the bullet points from the list */
+}   

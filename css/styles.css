@@ -145,6 +145,10 @@ hr {
     text-align: center;
 }
 
+.certification-title {
+    text-align: center;
+}
+
 .accomplishments {
     text-align: center;
 }
@@ -165,6 +169,19 @@ hr {
     text-align: center;
 }
 
+
 .personal-list-item {
     list-style-type: none; /* Remove the bullet points from the list */
 }   
+
+.current-ventures {
+    text-align: center;
+}
+
+.current-ventures-list {
+    text-align: center;
+}
+
+.current-ventures-list-item {
+    list-style-type: none; /* Remove the bullet points from the list */
+}

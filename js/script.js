@@ -22,6 +22,12 @@ submitButton.addEventListener("click", function(e) {
     }
 })
 
+// function to redirect to another page. Usually used after form submission.
+function redirectToPage(url) {
+    window.location.href = url;
+}
+
+
 
 
 //alert("Hello, World!")

@@ -9,8 +9,9 @@ h1, h2, h3, h4 {
 }
 
 .container {
-    max-width: 840px;   /* Set the maximum width of the container to 840px */
-    margin: 0 auto;     /* Center the container */
+    margin: 0 auto;
+    max-width: 840px;
+    padding-top: 60px;
 }
 
 .container > div {
@@ -36,6 +37,15 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 480px) { /* Apply the following styles for screens less than 480px */
+    .navbar-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-list li {
+        margin-bottom: 10px;
+    }
+
     .about-grid {
         grid-template-columns: 100%;   /* Use 100% for a single column layout */
     }
@@ -187,32 +197,41 @@ hr {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .navbar-list {
+    display: flex;
+    justify-content: flex-start;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 20px;
 }
 
 .navbar-list li {
     display: inline;
+    margin-right: 20px;
 }
 
 .navbar-list li a {
-    color: white;
     text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     padding: 10px 20px;
     display: block;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar-list li a:hover {

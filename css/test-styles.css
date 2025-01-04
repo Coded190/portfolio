@@ -1,9 +1,27 @@
 /*  
-CSS Selectors
+CSS Tips
 
-    Element selector:    p, h3
-    Class selector:      .about-list-item (use ".")
-    ID selector:         #name (use "#")
+    Use the correct selector to target the elements you want to style.
+        Element selector:    p, h3
+        Class selector:      .about-list-item (use ".")
+        ID selector:         #name (use "#")
+
+    Margin, Border, and Padding are the box model properties.
+        Margin: Space outside the border
+        Border: A border around the padding
+        Padding: Space between the content and the border
+        Content: The content of the box
+
+    Flexbox is a layout model that allows elements to align and distribute space within a container. 1 dimensional layout (row or column).
+        display: flex;  Use flex to create a flex layout
+        flex-direction: row; Align the items in a row 
+        justify-content: space-between; Distribute the space between the items 
+        align-items: center;  Align the items in the center 
+
+    Grid is a 2 dimentional layout model that allows elements to align and distribute space within a container.
+        display: grid;  Use grid to create a grid layout
+        grid-template-rows: auto auto;  Use auto twice for 2 rows
+        grid-template-columns: auto auto auto;  Use auto three times for 3 columns
 
 */
 

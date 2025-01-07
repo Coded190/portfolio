@@ -36,20 +36,6 @@ h1, h2, h3, h4 {
     list-style: none;   /* Remove the bullet points from the list */
 }
 
-@media (max-width: 480px) { /* Apply the following styles for screens less than 480px */
-    .navbar-list {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-list li {
-        margin-bottom: 10px;
-    }
-
-    .about-grid {
-        grid-template-columns: 100%;   /* Use 100% for a single column layout */
-    }
-}
 
 .projects-heading {
     text-align: center;
@@ -92,11 +78,6 @@ h1, h2, h3, h4 {
     transition: all ease-in-out .2s;
 }
 
-@media (max-width:650px) {
-    .project-grid {
-        grid-template-columns: 100%;
-    }
-}
 
 .links-and-contact {
     display: grid; /* Use grid to create a grid layout */
@@ -112,17 +93,12 @@ h1, h2, h3, h4 {
     padding: 0;
 }
 
-@media (max-width:650px) {
-    .links-and-contact {
-        grid-template-columns: 100%;
-    }
-}
 
 .profile-picture {
     border-radius: 25%; /* Make the image round */
     width: auto;
     height: 150px;
-    box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16); /* Add a shadow to the image */
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16); /* Add a shadow to the image */
     transition: all ease-in-out .2s; /* Add a transition effect to the image */
 }
 
@@ -261,4 +237,29 @@ hr {
 
 .menu-button:hover {
     background-color: #575757;
+}
+
+@media (max-width:650px) {
+    .links-and-contact {
+        grid-template-columns: 100%;
+    }
+    .project-grid {
+        grid-template-columns: 100%;
+    }
+
+}
+
+@media (max-width: 480px) { /* Apply the following styles for screens less than 480px */
+    .navbar-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-list li {
+        margin-bottom: 10px;
+    }
+
+    .about-grid {
+        grid-template-columns: 100%;   /* Use 100% for a single column layout */
+    }
 }

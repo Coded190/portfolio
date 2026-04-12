@@ -121,8 +121,8 @@ a {
 .project-grid,
 .directory-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
 }
 
 .project-card {
@@ -144,6 +144,12 @@ a {
     width: 100%;
     display: block;
     border-radius: 0.6rem;
+}
+
+.project-card img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    max-height: 180px;
 }
 
 .project-card .project-content {
@@ -267,16 +273,18 @@ hr {
 }
 
 .site-footer {
-    max-width: 980px;
-    margin: 0 auto 1.2rem;
-    padding: 1rem;
+    width: 100%;
+    margin: 1.8rem 0 0;
+    padding: 0;
 }
 
 .footer-inner {
     background: rgba(19, 52, 63, 0.93);
     color: #ffffff;
-    border-radius: 1rem;
-    padding: 1rem;
+    border-radius: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.38);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+    padding: 0.95rem 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

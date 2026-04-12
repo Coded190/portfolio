@@ -1,265 +1,363 @@
-body {
-    font-family: 'montserrat', sans-serif; /* Use Montserrat as the font for the body */
-    background: #90ccd9;
-    color: white;
+:root {
+    --ink: #13343f;
+    --surface: #f5fbfc;
+    --surface-strong: #d8eef3;
+    --brand: #2f7f95;
+    --brand-dark: #145166;
+    --muted: #375760;
+    --shadow: 0 10px 28px rgba(12, 57, 69, 0.16);
 }
 
-h1, h2, h3, h4 {
-    font-family: 'montserrat', monospace; /* Use Roboto as the font for the headings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.6), transparent 30%),
+        linear-gradient(120deg, #8ac4d1 0%, #c7e6ee 55%, #ecf7fa 100%);
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+}
+
+a {
+    color: var(--brand-dark);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(19, 52, 63, 0.94);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button {
+    display: none;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    padding: 0.5rem 0.75rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.navbar-list {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.navbar-list a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.55rem 0.85rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.navbar-list a:hover,
+.navbar-list a:focus-visible {
+    background: rgba(255, 255, 255, 0.16);
 }
 
 .container {
     margin: 0 auto;
-    max-width: 840px;
-    padding-top: 60px;
+    max-width: 980px;
+    padding: 1.2rem 1rem 3rem;
 }
 
-.container > div {
-    margin: 20px auto;  /* Add margin to the divs inside the container */
+.surface-card {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
 }
 
 .intro {
-    text-align: center; /* Align the text to the center */
+    text-align: center;
 }
 
-.about-grid {
-    display: grid;  /* Use grid to create a grid layout */
-    grid-template-columns: 50% 50%;  /* Use 50% twice for equal size for columns both columns  */
+.profile-picture-frame {
+    width: 220px;
+    height: 280px;
+    margin: 0 auto 0.8rem;
+    overflow: hidden;
+    border-radius: 0.65rem;
+    box-shadow: var(--shadow);
 }
 
-.i-am, .i-like {
+.profile-picture {
+    width: 129%;
+    height: 106%;
+    object-fit: cover;
+    object-position: center 9%;
+    margin-left: -15%;
+    margin-top: -9%;
+    transform: none;
+}
+
+.project-grid,
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    background: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    border: 0;
+    box-shadow: none;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-card img,
+.media-item img,
+.media-item video {
+    width: 100%;
+    display: block;
+    border-radius: 0.6rem;
+}
+
+.project-card .project-content {
+    padding: 0.65rem 0 0.2rem;
+}
+
+.page-title {
+    margin-bottom: 0.4rem;
+}
+
+.section-lead {
+    color: var(--muted);
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.media-item {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.media-item h3 {
+    margin-top: 0.6rem;
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(26px) scale(0.99);
+    transition: opacity 650ms ease, transform 650ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.awards-honors-personal > div {
+    margin-bottom: 1.6rem;
+}
+
+.awards-honors-personal > div:last-child {
+    margin-bottom: 0;
+}
+
+.awards-honors-personal h3 {
+    margin-bottom: 0.55rem;
+}
+
+.awards-honors-personal ul {
+    margin-top: 0.35rem;
+}
+
+.about-grid,
+.links-and-contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 320px));
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+.i-am,
+.i-like {
     text-align: center;
 }
 
 .about-list {
-    text-align: center;
-    list-style: none;   /* Remove the bullet points from the list */
+    display: inline-block;
+    text-align: left;
 }
 
-
-.projects-heading {
-    text-align: center;
+.about-list,
+.links-list,
+.awards-list,
+.current-ventures-list,
+.accomplishment-list,
+.research-list,
+.personal-list {
+    margin: 0;
+    padding-left: 1.2rem;
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.project-image-wrapper {    
-    justify-self: center;   /* Align the image to the center */
-    padding: 4%;
-    position: relative;
-}
-
-.project-image {
-    border-radius: 5px; 
-    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
-    transition: all ease-in-out .2s;
-}
-
-.project-image:hover {
-    filter: brightness(.75); /* Change the brightness on hover */
-    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
-}
-
-.project-image-wrapper:hover > h4 {
-    visibility: visible; /* Show the project name on hover */
-}
-
-.project-image-wrapper > h4 {   
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    visibility: hidden;
-    z-index: 2;
-    transition: all ease-in-out .2s;
-}
-
-
-.links-and-contact {
-    display: grid; /* Use grid to create a grid layout */
-    grid-template-columns: 30% 70%;
-}
-
-.links {
-    justify-self: center;
-}
-
-.links-list {
-    list-style: none;  /* Remove the bullet points from the list */
-    padding: 0;
-}
-
-
-.profile-picture {
-    border-radius: 25%; /* Make the image round */
-    width: auto;
-    height: 150px;
-    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16); /* Add a shadow to the image */
-    transition: all ease-in-out .2s; /* Add a transition effect to the image */
-}
-
-.profile-picture:hover {
-    box-shadow: 0 14px 24px 0 rgb(34, 60, 80, 0.16); /* Change the shadow on hover */
-}
-
-form input, textarea {
-    padding: 5px;
-    border-radius: 5px;
-    width: 240px;
-}
-
-form input[type="submit"] {
-    width: 250px;
-
+form input,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #9ac7d2;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    font: inherit;
+    margin-top: 0.3rem;
 }
 
 .submit-button-wrapper {
-    margin: 20px 0;
+    margin-top: 0.9rem;
+}
+
+#submit-button {
+    background: var(--brand);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background: var(--brand-dark);
 }
 
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));   /* Add a gradient to the hr going from transparent to black to transparent*/
+    background-image: linear-gradient(to right, transparent, rgba(19, 52, 63, 0.45), transparent);
+    margin: 1.3rem 0;
 }
 
-.awards-title {
-    text-align: center;
+.site-footer {
+    max-width: 980px;
+    margin: 0 auto 1.2rem;
+    padding: 1rem;
 }
 
-.certification-title {
-    text-align: center;
-}
-
-.accomplishments {
-    text-align: center;
-}
-
-.accomplishment-list-item {
-    list-style-type: none; /* Remove the bullet points from the list */
-}
-
-.research-club {
-    text-align: center;
-}
-
-.research-list-item {
-    list-style-type: none; /* Remove the bullet points from the list */
-}
-
-.personal-interest {
-    text-align: center;
-}
-
-
-.personal-list-item {
-    list-style-type: none; /* Remove the bullet points from the list */
-}   
-
-.current-ventures {
-    text-align: center;
-}
-
-.current-ventures-list {
-    text-align: center;
-}
-
-.current-ventures-list-item {
-    list-style-type: none; /* Remove the bullet points from the list */
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+.footer-inner {
+    background: rgba(19, 52, 63, 0.93);
+    color: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
 }
 
-.navbar.active {
-    display: none;
-}
-
-.navbar-list {
+.footer-links {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    gap: 0.8rem;
+    flex-wrap: wrap;
 }
 
-.navbar-list li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.navbar-list li a {
+.footer-links a {
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    padding: 10px 20px;
-    display: block;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    padding: 0.35rem 0.75rem;
 }
 
-.navbar-list li a:hover {
-    background-color: #575757;
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    background: rgba(255, 255, 255, 0.18);
 }
 
-.menu-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1001;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+.linkedin-message-note {
+    text-align: center;
+    padding: 0.6rem 0;
 }
 
-.menu-button:hover {
-    background-color: #575757;
+.linkedin-message-note a {
+    font-weight: 700;
 }
 
-@media (max-width:650px) {
+@media (max-width: 800px) {
+    .project-grid,
+    .directory-grid,
+    .media-grid,
+    .about-grid,
     .links-and-contact {
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
     }
-    .project-grid {
-        grid-template-columns: 100%;
-    }
-
 }
 
-@media (max-width: 480px) { /* Apply the following styles for screens less than 480px */
+@media (max-width: 640px) {
+    .menu-button {
+        display: inline-block;
+    }
+
+    .navbar {
+        display: none;
+        padding: 0 0.5rem 0.75rem;
+    }
+
+    .navbar.is-open {
+        display: block;
+    }
+
     .navbar-list {
         flex-direction: column;
-        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 0.8rem;
+        padding: 0.6rem;
     }
 
-    .navbar-list li {
-        margin-bottom: 10px;
+    .container {
+        padding-top: 0.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
+    .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 
-    .about-grid {
-        grid-template-columns: 100%;   /* Use 100% for a single column layout */
+    .project-card,
+    .project-card:hover {
+        transform: none;
     }
 }

@@ -13,30 +13,32 @@
 
 <body>
 
-    <header>
-        <button class="menu-button" onclick="toggleMenu()">☰</button>
+    <header class="site-header">
+        <button class="menu-button" type="button" aria-label="Toggle site navigation" aria-expanded="false" aria-controls="navMenu">☰</button>
         <nav class="navbar" id="navMenu">
             <ul class="navbar-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="updates.html">Updates</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
         <div class="container">
-            <div class="intro">
-                <img class="profile-picture" src="images/Headshot_Professional.pdf" width="300" height="auto"/>
+            <div class="intro surface-card">
                 <h1 id="name">Christian Moore</h1>
-                <h3>AI/ML Engineer</h3>
+                <h3>PhD Student</h3>
                 <h3>Computer Vision Specialist</h3>
-                <h3>Web/Full-Stack Developer</h3>
+                <p>University of Hawai'i at M&#257;noa | Information and Computer Science Department</p>
                 <p>(( Never stop learning ))</p>
             </div>
 
             <hr/>
 
-            <div class="about-grid">
+            <div class="about-grid surface-card">
                 <div class="i-am">
                     <h3>I am</h3>
                     <ul class="about-list">
@@ -58,7 +60,7 @@
 
             <hr/>
 
-            <div class="awards-honors-personal">
+            <div class="awards-honors-personal surface-card">
 
                 <div class="current-ventures">
                     <h3>Current Ventures</h3>
@@ -117,36 +119,20 @@
 
             <hr/>
 
-            <div class="links-and-contact">
-                <div class="links">
-                    <h3>Links</h3>
-                    <ul class="links-list">
-                        <li>
-                            <a href="https://www.linkedin.com/in/chrismoore-morehouse/">LinkedIn</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Coded190/">Github</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <form action="index.html">
-                        <label for="email">
-                            <h4>Email</h4>
-                            <input id="email" placeholder="Enter your email" />
-                        </label>
-                        <label for="message">
-                            <h4>Message</h4>
-                            <textarea id="message">Your Message</textarea>
-                        </label>
-                        <div class="submit-button-wrapper">                            
-                            <input id="submit-button" type="submit" value="Send Message">
-                        </div>
-                    </form>
-                </div>
+            <div class="linkedin-message-note">
+                <p>For messages, please connect with me on <a href="https://www.linkedin.com/in/chrismoore-morehouse/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>Christian Moore Portfolio</p>
+            <div class="footer-links">
+                <a href="https://github.com/Coded190/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/chrismoore-morehouse/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -121,7 +121,9 @@ a {
 .project-grid,
 .directory-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+    justify-content: center;
+    align-items: start;
     gap: 0.9rem;
 }
 
@@ -132,6 +134,9 @@ a {
     border: 0;
     box-shadow: none;
     transition: transform 0.2s ease;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
 }
 
 .project-card:hover {

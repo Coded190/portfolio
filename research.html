@@ -27,7 +27,7 @@
         <div class="container">
             <section class="surface-card">
                 <h1 class="page-title">Research</h1>
-                <p class="section-lead">PhD student researcher in the Computational Imaging and Robotic Perception (CIRP) Lab.</p>
+                <p class="section-lead">PhD student researcher in the Computational Imaging and Robotic Perception (CIRP) Lab, focused on palm manipulation systems and embodied robotics.</p>
             </section>
 
             <hr/>
@@ -35,22 +35,40 @@
             <section class="surface-card">
                 <h2>Current Role</h2>
                 <p>I am a PhD student in the Computational Imaging and Robotic Perception (CIRP) Lab, where my work explores perception-driven intelligence for robotics and embodied systems.</p>
-                <p>My research includes Vision-Language-Action (VLA) models for connecting visual understanding, language reasoning, and action planning in real-world environments.</p>
+                <p>My current project trains a Vision-Language-Action (VLA) model for palm tree spraying and trimming by combining Blender simulation, Isaac Sim teleoperation, and synthetic data generation.</p>
             </section>
 
             <hr/>
 
             <section class="surface-card">
-                <h2>Design and Fabrication</h2>
-                <p>Alongside model research, I fabricate and prototype system components by creating designs in CAD software and producing parts with 3D printing workflows.</p>
-                <p>This allows fast iteration between software experiments and physical system development.</p>
+                <h2>Thesis Abstract</h2>
+                <p>Agricultural autonomy remains significantly constrained by the stochastic nature of field environments, where variables such as shifting lighting, weather volatility, and deformable biological objects create a reality gap for traditional robotic systems. To address these challenges, this research proposes a scalable Real-to-Sim-to-Real (R2S2R) framework designed to facilitate the training of generalist Vision-Language-Action (VLA) and Vision-Action Models (VAM).</p>
+                <p>The core of this work is organized into three primary research thrusts. First, we introduce an agentic pipeline for synthetic data generation (SDG) within NVIDIA Isaac Sim; by leveraging autonomous agents to orchestrate the procedural generation of Universal Scene Description (USD) assets, we enable the massive scaling of simulation data specifically tailored for unstructured agricultural settings. Second, we develop a novel VLA/VAM architecture capable of high-level reasoning and low-level motor control, optimized to maintain performance under the complex contact physics of non-rigid matter. Finally, we implement an R2S2R feedback loop that utilizes teleoperated demonstrations and real-world 3D capture to enrich simulation environments with high-fidelity environmental data, ensuring real-world adaptation.</p>
+                <p>This framework is validated through a complex manipulation task: the remediation of the Coconut Rhinoceros Beetle (CRB) in occluded, biological environments. Through this unified approach, we demonstrate a scalable pathway toward generalist robotic agents capable of performing robust agricultural operations.</p>
+            </section>
+
+            <hr/>
+
+            <section class="surface-card">
+                <h2>Simulation and Fabrication</h2>
+                <p>We built a realistic palm tree simulation in Blender, added rigid body physics and frond colliders, and tuned mass and stiffness to reproduce true-to-life interactions.</p>
+                <p>Alongside that environment, we CAD-designed and 3D-printed a custom robotic arm, then exported the full setup into Isaac Sim for calibration and digital twin alignment.</p>
+                <p><a href="project-palm-vla.html">View the project page</a></p>
+            </section>
+
+            <hr/>
+
+            <section class="surface-card">
+                <h2>Field Collaboration</h2>
+                <p>We worked with the University of Hawaii at Manoa climber team and the University of Michigan climber team to mount the arm for crown-level operation on the palms.</p>
+                <p>The end effector team supported spraying and trimming at the crown and flowers, helping move the workflow from simulation into a field-ready deployment path.</p>
             </section>
 
             <hr/>
 
             <section class="surface-card">
                 <h2>Academic Progress</h2>
-                <p>I am currently pursuing my Masters degree, and it is expected that I will attain this degree in Fall 2026.</p>
+                <p>I am currently a PhD student in the Information and Computer Science Department at the University of Hawai'i at M&#257;noa, conducting research in robotic perception and embodied intelligence.</p>
             </section>
         </div>
     </main>

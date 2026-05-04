@@ -144,6 +144,7 @@ a {
 }
 
 .project-card img,
+.project-card video,
 .media-item img,
 .media-item video {
     width: 100%;
@@ -155,6 +156,13 @@ a {
     aspect-ratio: 16 / 10;
     object-fit: cover;
     max-height: 180px;
+}
+
+.project-card video {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    max-height: 180px;
+    background: #0d1f26;
 }
 
 .project-card .project-content {

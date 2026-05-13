@@ -1,11 +1,12 @@
 :root {
-    --ink: #13343f;
-    --surface: #f5fbfc;
-    --surface-strong: #d8eef3;
-    --brand: #2f7f95;
-    --brand-dark: #145166;
-    --muted: #375760;
-    --shadow: 0 10px 28px rgba(12, 57, 69, 0.16);
+    --ink: #f3ecff;
+    --surface: rgba(14, 12, 28, 0.82);
+    --surface-strong: rgba(35, 18, 61, 0.9);
+    --brand: #b06cff;
+    --brand-dark: #7f35d7;
+    --muted: #c1b1e8;
+    --shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
+    --space-line: rgba(176, 108, 255, 0.4);
 }
 
 * {
@@ -17,9 +18,47 @@ body {
     font-family: "Montserrat", sans-serif;
     color: var(--ink);
     background:
-        radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.6), transparent 30%),
-        linear-gradient(120deg, #8ac4d1 0%, #c7e6ee 55%, #ecf7fa 100%);
+        radial-gradient(circle at 50% 12%, rgba(176, 108, 255, 0.18), transparent 22%),
+        radial-gradient(circle at 12% 20%, rgba(87, 53, 170, 0.26), transparent 28%),
+        radial-gradient(circle at 88% 26%, rgba(56, 124, 255, 0.16), transparent 24%),
+        linear-gradient(180deg, #05040a 0%, #0a0813 48%, #0f1120 100%);
     min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    background:
+        linear-gradient(180deg, rgba(4, 4, 8, 0.2), rgba(4, 4, 8, 0.7)),
+        url("../images/e43b61b8b8e3fd44a5b3d2b4d52d5b12b7901f45.png") center top / cover no-repeat;
+    opacity: 0.16;
+    filter: saturate(0.9) contrast(1.08) brightness(0.72);
+}
+
+body::after {
+    background-image:
+        radial-gradient(circle at 12% 16%, rgba(255, 255, 255, 0.92) 0 1px, transparent 1.6px),
+        radial-gradient(circle at 18% 72%, rgba(176, 108, 255, 0.75) 0 1.2px, transparent 1.8px),
+        radial-gradient(circle at 33% 28%, rgba(255, 255, 255, 0.72) 0 1px, transparent 1.7px),
+        radial-gradient(circle at 44% 14%, rgba(173, 217, 255, 0.72) 0 1px, transparent 1.7px),
+        radial-gradient(circle at 58% 36%, rgba(255, 255, 255, 0.86) 0 1.1px, transparent 1.8px),
+        radial-gradient(circle at 66% 74%, rgba(255, 255, 255, 0.7) 0 1px, transparent 1.7px),
+        radial-gradient(circle at 79% 20%, rgba(176, 108, 255, 0.6) 0 1.2px, transparent 1.8px),
+        radial-gradient(circle at 90% 58%, rgba(255, 255, 255, 0.76) 0 1px, transparent 1.7px),
+        radial-gradient(circle at 8% 48%, rgba(176, 108, 255, 0.55) 0 1px, transparent 1.7px),
+        radial-gradient(circle at 72% 10%, rgba(255, 255, 255, 0.7) 0 1px, transparent 1.7px);
+    background-size: 220px 220px;
+    opacity: 0.65;
 }
 
 h1,
@@ -30,22 +69,29 @@ h4 {
 }
 
 a {
-    color: var(--brand-dark);
+    color: #d5b7ff;
+}
+
+a:hover,
+a:focus-visible {
+    color: #f0d9ff;
 }
 
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(19, 52, 63, 0.94);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    background: rgba(6, 6, 12, 0.88);
+    border-bottom: 1px solid rgba(176, 108, 255, 0.28);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
 }
 
 .menu-button {
     display: none;
-    background: transparent;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(176, 108, 255, 0.08);
+    color: #f7edff;
+    border: 1px solid rgba(176, 108, 255, 0.45);
     padding: 0.5rem 0.75rem;
     font-size: 1.05rem;
     cursor: pointer;
@@ -70,7 +116,7 @@ a {
 .navbar-list a {
     display: block;
     text-decoration: none;
-    color: #ffffff;
+    color: #f8f1ff;
     padding: 0.55rem 0.85rem;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -78,7 +124,8 @@ a {
 
 .navbar-list a:hover,
 .navbar-list a:focus-visible {
-    background: rgba(255, 255, 255, 0.16);
+    background: rgba(176, 108, 255, 0.16);
+    box-shadow: inset 0 0 0 1px rgba(176, 108, 255, 0.2);
 }
 
 .container {
@@ -88,15 +135,45 @@ a {
 }
 
 .surface-card {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
+    background: linear-gradient(180deg, rgba(17, 14, 31, 0.88), rgba(10, 10, 18, 0.84));
+    border: 1px solid rgba(176, 108, 255, 0.18);
+    border-radius: 1rem;
+    padding: 1.2rem 1.15rem;
+    box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
 }
 
 .intro {
     text-align: center;
+}
+
+.intro h1,
+.page-title,
+.site-footer p,
+.awards-honors-personal h3,
+.about-grid h3,
+.current-ventures h3,
+.accomplishments h3,
+.research-club h3,
+.personal-interest h3 {
+    text-shadow: 0 0 18px rgba(176, 108, 255, 0.35);
+}
+
+#name {
+    color: #f8f1ff;
+}
+
+.intro p,
+.section-lead,
+.awards-honors-personal,
+.about-list,
+.current-ventures-list,
+.accomplishment-list,
+.research-list,
+.personal-list,
+.links-list,
+li {
+    color: #d9d0ef;
 }
 
 .profile-picture-frame {
@@ -128,12 +205,12 @@ a {
 }
 
 .project-card {
-    background: transparent;
-    border-radius: 0;
+    background: linear-gradient(180deg, rgba(17, 14, 31, 0.9), rgba(9, 9, 18, 0.84));
+    border-radius: 1rem;
     overflow: hidden;
-    border: 0;
-    box-shadow: none;
-    transition: transform 0.2s ease;
+    border: 1px solid rgba(176, 108, 255, 0.2);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
@@ -150,6 +227,8 @@ a {
 
 .project-card:hover {
     transform: translateY(-4px);
+    border-color: rgba(205, 166, 255, 0.4);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.5), 0 0 24px rgba(176, 108, 255, 0.16);
 }
 
 .project-card img,
@@ -174,7 +253,7 @@ a {
     object-fit: cover;
     height: auto;
     max-height: 180px;
-    background: #0d1f26;
+    background: #090812;
     width: 100%;
 }
 
@@ -184,7 +263,7 @@ a {
     object-fit: cover;
     height: auto;
     max-height: 300px;
-    background: #0d1f26;
+    background: #090812;
     width: 100%;
 }
 
@@ -279,7 +358,9 @@ form input,
 textarea {
     width: 100%;
     max-width: 100%;
-    border: 1px solid #9ac7d2;
+    border: 1px solid rgba(176, 108, 255, 0.28);
+    background: rgba(9, 9, 18, 0.82);
+    color: #f6efff;
     border-radius: 0.5rem;
     padding: 0.6rem;
     font: inherit;
@@ -291,20 +372,21 @@ textarea {
 }
 
 #submit-button {
-    background: var(--brand);
+    background: linear-gradient(135deg, var(--brand), var(--brand-dark));
     color: #ffffff;
     border: none;
     cursor: pointer;
+    box-shadow: 0 10px 24px rgba(127, 53, 215, 0.28);
 }
 
 #submit-button:hover {
-    background: var(--brand-dark);
+    background: linear-gradient(135deg, #c38cff, #8f49eb);
 }
 
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, transparent, rgba(19, 52, 63, 0.45), transparent);
+    background-image: linear-gradient(to right, transparent, var(--space-line), transparent);
     margin: 1.3rem 0;
 }
 
@@ -315,11 +397,11 @@ hr {
 }
 
 .footer-inner {
-    background: rgba(19, 52, 63, 0.93);
+    background: rgba(7, 7, 14, 0.92);
     color: #ffffff;
     border-radius: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.38);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+    border-top: 1px solid rgba(176, 108, 255, 0.28);
+    border-bottom: 1px solid rgba(176, 108, 255, 0.28);
     padding: 0.95rem 1.2rem;
     display: flex;
     justify-content: space-between;
@@ -337,14 +419,15 @@ hr {
 .footer-links a {
     color: #ffffff;
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(176, 108, 255, 0.42);
     border-radius: 999px;
     padding: 0.35rem 0.75rem;
+    background: rgba(176, 108, 255, 0.08);
 }
 
 .footer-links a:hover,
 .footer-links a:focus-visible {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(176, 108, 255, 0.18);
 }
 
 .linkedin-message-note {
@@ -382,7 +465,7 @@ hr {
 
     .navbar-list {
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(176, 108, 255, 0.1);
         border-radius: 0.8rem;
         padding: 0.6rem;
     }

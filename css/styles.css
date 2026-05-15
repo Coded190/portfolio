@@ -40,8 +40,8 @@ body::after {
 body::before {
     background:
         linear-gradient(180deg, rgba(4, 4, 8, 0.2), rgba(4, 4, 8, 0.7)),
-        url("../images/e43b61b8b8e3fd44a5b3d2b4d52d5b12b7901f45.png") center top / cover no-repeat;
-    opacity: 0.16;
+        url("../images/MacBook Pro 16_ - 1.png") center top / cover no-repeat;
+    opacity: 1.0;
     filter: saturate(0.9) contrast(1.08) brightness(0.72);
 }
 
